@@ -1,0 +1,6 @@
+{
+  "summary":  "Cập nhật bản đề xuất kiến trúc nền tảng Vạn Cổ Luân Hồi: bổ sung toàn diện cơ chế đăng nhập OAuth bằng TikTok (TikTok Login Kit v2) song song với Google OAuth và xác thực nội bộ. Đặc tả đầy đủ flow popup không chạm iframe, OAuth callback, bảng ánh xạ người dùng liên kết mạng xã hội (oauth_providers) và hướng dẫn cấu hình chi tiết.",
+  "updatedAt":  "2026-09-29T10:21:16.043209438Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}

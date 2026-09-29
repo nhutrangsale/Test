@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-primary: #07090D;
+    --bg-surface: #0D1219;
+    --bg-surface-hover: #131B26;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --text-primary: #F1F5F9;
+    --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;
+    --jade-primary: #10B981;
+    --jade-bg: rgba(16, 185, 129, 0.12);
+  }
+
+  html.light {
+    --bg-primary: #F6F4EE;
+    --bg-surface: #FFFFFF;
+    --bg-surface-hover: #EFECE3;
+    --border-color: rgba(0, 0, 0, 0.08);
+    --text-primary: #1C1917;
+    --text-secondary: #44403C;
+    --text-muted: #78716C;
+    --jade-primary: #059669;
+    --jade-bg: rgba(5, 150, 105, 0.1);
+  }
+
+  /* Color accent themes */
+  html[data-accent="amber"] {
+    --jade-primary: #D97706;
+    --jade-bg: rgba(217, 119, 6, 0.12);
+  }
+  html[data-accent="crimson"] {
+    --jade-primary: #E11D48;
+    --jade-bg: rgba(225, 29, 72, 0.12);
+  }
+  html[data-accent="sapphire"] {
+    --jade-primary: #3B82F6;
+    --jade-bg: rgba(59, 130, 246, 0.12);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  /* Custom Ancient Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  html.dark ::-webkit-scrollbar-track {
+    background: #0B0F15;
+  }
+
+  html.dark ::-webkit-scrollbar-thumb {
+    background: #1F2B37;
+    border-radius: 3px;
+  }
+
+  html.dark ::-webkit-scrollbar-thumb:hover {
+    background: #10B981;
+  }
+
+  html.light ::-webkit-scrollbar-track {
+    background: #ECE8DC;
+  }
+
+  html.light ::-webkit-scrollbar-thumb {
+    background: #D4CEBF;
+    border-radius: 3px;
+  }
+
+  html.light ::-webkit-scrollbar-thumb:hover {
+    background: #059669;
+  }
+}
+
+/* =======================================================
+   FONTS PHÙ HỢP NHẤT VỚI TIẾNG VIỆT
+   ======================================================= */
+
+/* Tiêu đề trang trọng mang khí chất cổ phong, hỗ trợ dấu tiếng Việt hoàn hảo */
+.font-display,
+.font-cinzel {
+  font-family: 'Playfair Display', 'Lora', serif;
+  font-feature-settings: "kern", "liga";
+}
+
+/* Văn bản bài đọc, chiêm nghiệm, tản văn sâu lắng */
+.font-lora,
+.font-reading {
+  font-family: 'Lora', 'Merriweather', Georgia, serif;
+}
+
+/* Giao diện UI, nút bấm, menu chuẩn tiếng Việt hiện đại */
+.font-sans-ui {
+  font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Subtle ink wash background accents */
+html.dark .bg-ink-mesh {
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(6, 78, 59, 0.06) 0%, transparent 50%);
+}
+
+html.light .bg-ink-mesh {
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(5, 150, 105, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(217, 119, 6, 0.02) 0%, transparent 50%);
+}
+
+.border-hairline {
+  border-color: var(--border-color);
+}

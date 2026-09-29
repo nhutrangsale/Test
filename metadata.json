@@ -1,0 +1,6 @@
+{
+  "name": "Vạn Cổ Luân Hồi",
+  "description": "Nền tảng triết lý nhân sinh, cổ phong, chiêm nghiệm và kiến trúc module mở rộng.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
